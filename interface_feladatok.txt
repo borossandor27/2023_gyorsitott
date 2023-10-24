@@ -1,0 +1,32 @@
+1. **Alakzatok területének és kerületének számítása:**
+
+   Definiálj egy `IGeometry` interfészt, amelynek két metódusa van: `CalculateArea()` és `CalculatePerimeter()`. Hozz létre néhány alakzatot, például négyzetet és téglalapot, amelyek implementálják ezt az interfészt, és számítsd ki azok területét és kerületét az egyes osztályokban.
+
+2. **Banki számlák:**
+
+   Hozz létre egy `IBankAccount` interfészt, amelynek metódusai a következők: `Deposit(double amount)`, `Withdraw(double amount)`, és `GetBalance()`. Készíts egy `BankAccount` osztályt, amely implementálja ezt az interfészt. Ezután hozz létre egy `SavingsAccount` osztályt, amely az `IBankAccount` interfészt is implementálja, de hozzáad egy kamatlábat, amely hozzáadódik a számlaegyenleghez havonta.
+
+3. **Vektorműveletek:**
+
+   Definiálj egy `IVector` interfészt, amely tartalmazza a vektorok összeadásához, kivonásához és skalárszorzásához szükséges metódusokat. Hozz létre egy `Vector` osztályt, amely implementálja ezt az interfészt, és képes vektorok műveletek elvégzésére.
+
+4. **Állatok és hangjaik:**
+
+   Készíts egy `IAnimal` interfészt, amelynek van egy `MakeSound()` metódusa. Hozz létre különböző állatokat (pl. kutya, macska, tehén stb.), amelyek implementálják ezt az interfészt, és írd meg, hogy milyen hangot adnak ki a `MakeSound()` metódusban.
+
+5. **Adattárolás:**
+
+   Hozz létre egy `IDataStorage` interfészt, amelynek metódusai a következők: `WriteData(string data)`, `ReadData()`. Implementálj egy `FileStorage` osztályt, amely az interfészt használja fájlban történő adattárolásra, és egy `DatabaseStorage` osztályt, amely az interfészt adatbázisban történő adattárolásra használja.
+
+6. **Alakzatok területének számítása:**
+
+   Hozz létre egy interfészt, például `IGeometry`, amelynek van egy `CalculateArea()` metódusa. Készítsd el a következő alakzatokat: négyzet, téglalap és kör, amelyek implementálják ezt az interfészt. Mindegyik osztályban írd meg a terület számítását a saját módodon.
+
+7. **Könyvtári könyvek:**
+
+   Készíts egy `IBook` interfészt, amelynek van néhány alapvető tulajdonsága, például `Title`, `Author`, `PublicationDate`. Hozz létre egy `LibraryBook` osztályt, amely implementálja ezt az interfésztet, és tárolja az adatokat egy könyvről.
+
+8. **Járművek üzemanyagfogyasztása:**
+
+   Hozz létre egy `IVehicle` interfészt, amelynek van egy `GetFuelConsumption()` metódusa. Készíts egy pár járműosztályt (pl. autó, motor) az interfészt implementálva, és definiálj különböző fogyasztási értékeket a járművekhez.
+
