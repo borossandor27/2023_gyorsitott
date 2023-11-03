@@ -49,6 +49,7 @@ namespace async_demo
 
         static void Main(string[] args)
         {
+            Method2();
             Method1();
             Method2();
             Console.ReadKey();

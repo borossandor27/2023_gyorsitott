@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HttpClientClass")]
+[assembly: AssemblyTitle("restapi_konzolos_masodik")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HttpClientClass")]
+[assembly: AssemblyProduct("restapi_konzolos_masodik")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1a5e62eb-39fe-4791-85b2-ddc500d123bf")]
+[assembly: Guid("42ac2f19-be37-4815-bc9d-2902402f50b8")]
 
 // Version information for an assembly consists of the following four values:
 //
