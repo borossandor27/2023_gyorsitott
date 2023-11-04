@@ -26,7 +26,7 @@ namespace restapi_WindowsForms_countrie
             {
                 return;
             }
-            string code=listBox_OrszagNevek.SelectedItem.ToString().Trim();
+            string code = listBox_OrszagNevek.SelectedItem.ToString().Trim();
             string apiUrl = $"https://restcountries.com/v3.1/alpha/{code}"; //--  a végpont --
 
             try
