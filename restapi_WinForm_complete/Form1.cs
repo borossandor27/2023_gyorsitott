@@ -238,21 +238,18 @@ namespace restapi_WinForm_complete
             //-- JSon létrehozása ------------
             int id = int.Parse(textBoxId.Text);
             string name = textBoxName.Text;
-            string address = textBoxAddress.Text;
-            string email = textBoxEmail.Text;
-            DateTime dateOfBird = dateTimePickerDateOfBirth.Value;
-            Person person = new Person(id, name, email, address, dateOfBird);
-
+            
+            
             //-- Törlésre rákérdezünk -----------------------
-            string keredsSzoveg = $"Valóban szeretné törölni {person.Name1} adatait?";
+            string keredsSzoveg = $"Valóban szeretné törölni {name} adatait?";
             if (MessageBox.Show(keredsSzoveg,"Megerősítés kérése",MessageBoxButtons.YesNo,MessageBoxIcon.Asterisk,MessageBoxDefaultButton.Button2)==DialogResult.No)
             {
                 return;                
             } 
             //-- törlést jóváhagyta a felhasználó ----------------
             string apiUrl = $"https://retoolapi.dev/WdWE6Y/data/{id}"; //--  a végpont --
-            HttpContent request = new StringContent(JsonConvert.SerializeObject(person), Encoding.UTF8, "application/json");
-            request.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+           //HttpContent request = new StringContent(JsonConvert.SerializeObject(person), Encoding.UTF8, "application/json");
+            //request.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
             try
             {
@@ -265,11 +262,11 @@ namespace restapi_WinForm_complete
                     string content = await response.Content.ReadAsStringAsync();
                     if (!string.IsNullOrEmpty(content))
                     {
-                        MessageBox.Show($"{person.Name1} nevű felhasználó törlése sikeres!", "Sikeres művelet!", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        MessageBox.Show($"{name} nevű felhasználó törlése sikeres!", "Sikeres művelet!", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
                     else
                     {
-                        MessageBox.Show($"{person.Name1} nevű felhasználó törlése sikertelen!", "A kiszolgáló a kérést visszautasította!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"{name} nevű felhasználó törlése sikertelen!", "A kiszolgáló a kérést visszautasította!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
