@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_WindowsForms_countr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_WinForm_complete", "restapi_WinForm_complete\restapi_WinForm_complete.csproj", "{30B77CA4-2F3F-4158-90D2-318AF44528C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-11-27_abstract", "2023-11-27_abstract\2023-11-27_abstract.csproj", "{775E5440-68C6-42AD-BC37-802E5AB04617}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{30B77CA4-2F3F-4158-90D2-318AF44528C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30B77CA4-2F3F-4158-90D2-318AF44528C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30B77CA4-2F3F-4158-90D2-318AF44528C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775E5440-68C6-42AD-BC37-802E5AB04617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775E5440-68C6-42AD-BC37-802E5AB04617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775E5440-68C6-42AD-BC37-802E5AB04617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775E5440-68C6-42AD-BC37-802E5AB04617}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
