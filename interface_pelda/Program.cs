@@ -27,6 +27,8 @@ namespace interface_pelda
 
             IResizable resizable = square;
             resizable.Resize(2.0);
+            Console.WriteLine("\nProgram vége");
+            Console.ReadLine();
         }
     }
 
