@@ -38,6 +38,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-12-04_sync_async", "20
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interface_pelda", "interface_pelda\interface_pelda.csproj", "{B72557CA-C27D-4470-A8A5-CC571F3102D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_SocialLinksSearch", "restapi_SocialLinksSearch\restapi_SocialLinksSearch.csproj", "{D7C238F6-1C2C-4155-A5BB-ACAC4344210B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_ZipCodeLookup", "restapi_ZipCodeLookup\restapi_ZipCodeLookup.csproj", "{10C16D2C-68EF-4925-96CD-3A61A2084E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +108,14 @@ Global
 		{B72557CA-C27D-4470-A8A5-CC571F3102D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72557CA-C27D-4470-A8A5-CC571F3102D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72557CA-C27D-4470-A8A5-CC571F3102D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C238F6-1C2C-4155-A5BB-ACAC4344210B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C238F6-1C2C-4155-A5BB-ACAC4344210B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C238F6-1C2C-4155-A5BB-ACAC4344210B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C238F6-1C2C-4155-A5BB-ACAC4344210B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
