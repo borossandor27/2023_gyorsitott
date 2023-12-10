@@ -10,7 +10,8 @@ namespace restapi_ZipCodeLookup
     {
         static async Task Main(string[] args)
         {
-            await GetZipCodeDataAsync("http://api.zippopotam.us/hu/4220");
+            string iranyitoszam = "4220";
+            await GetZipCodeDataAsync($"http://api.zippopotam.us/hu/{iranyitoszam}");
             Console.ReadLine();
         }
 
@@ -27,7 +28,7 @@ namespace restapi_ZipCodeLookup
                         string responseData = await response.Content.ReadAsStringAsync();
                         ZipCodeData zipCodeData = JsonConvert.DeserializeObject<ZipCodeData>(responseData);
 
-                        // Most a zipCodeData változó tartalmazza az API válaszát az osztályokban
+                        // Most a zipCodeData változó tartalmazza az API válaszát 
                         // Az adatokhoz való hozzáférés példa:
                         Console.WriteLine($"Post Code: {zipCodeData.PostCode}");
                         Console.WriteLine($"Country: {zipCodeData.Country}");
@@ -39,9 +40,9 @@ namespace restapi_ZipCodeLookup
                             foreach (var place in zipCodeData.Places)
                             {
                                 Console.WriteLine($"  Place Name: {place.PlaceName}");
-                                Console.WriteLine($"  Longitude: {place.Longitude}");
                                 Console.WriteLine($"  State: {place.State}");
                                 Console.WriteLine($"  State Abbreviation: {place.StateAbbreviation}");
+                                Console.WriteLine($"  Longitude: {place.Longitude}");
                                 Console.WriteLine($"  Latitude: {place.Latitude}");
                                 Console.WriteLine();
                             }
@@ -62,70 +63,6 @@ namespace restapi_ZipCodeLookup
                 }
             }
         }
-    }
-
-    public partial class ZipCodeData
-    {
-        [JsonProperty("post code")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long PostCode { get; set; }
-
-        [JsonProperty("country")]
-        public string Country { get; set; }
-
-        [JsonProperty("country abbreviation")]
-        public string CountryAbbreviation { get; set; }
-
-        [JsonProperty("places")]
-        public Place[] Places { get; set; }
-    }
-
-    public partial class Place
-    {
-        [JsonProperty("place name")]
-        public string PlaceName { get; set; }
-
-        [JsonProperty("longitude")]
-        public string Longitude { get; set; }
-
-        [JsonProperty("state")]
-        public string State { get; set; }
-
-        [JsonProperty("state abbreviation")]
-        public string StateAbbreviation { get; set; }
-
-        [JsonProperty("latitude")]
-        public string Latitude { get; set; }
-    }
-
-    public class ParseStringConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            if (Int64.TryParse(value, out var l))
-            {
-                return l;
-            }
-            throw new Exception("Cannot unmarshal type long");
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            if (untypedValue == null)
-            {
-                serializer.Serialize(writer, null);
-                return;
-            }
-            var value = (long)untypedValue;
-            serializer.Serialize(writer, value.ToString());
-            return;
-        }
-
-        public static readonly ParseStringConverter Singleton = new ParseStringConverter();
     }
 
 }

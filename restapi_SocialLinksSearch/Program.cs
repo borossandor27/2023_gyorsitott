@@ -5,35 +5,46 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
 
 namespace restapi_SocialLinksSearch
 {
     internal class Program
     {
         //-- https://rapidapi.com/letscrape-6bRBa3QguO5/api/social-links-search
-        static async Task Main()
+        //-- Uri("https://social-links-search.p.rapidapi.com/search-social-links?query=John%20Smith&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest")
+        //-- Headers: X-RapidAPI-Key: c9dc83b0cemsh3de750b13d1cc40p122975jsne2d6f7510e0b
+        //-- Headers: X-RapidAPI-Host: social-links-search.p.rapidapi.com
+        private static async Task Main()
         {
-            string query = "John Smith";
-            var client = new HttpClient();
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri($"https://social-links-search.p.rapidapi.com/search-social-links?query={query}&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest"),
-                Headers =
-                {
-                    { "X-RapidAPI-Key", "7508cc1faemsh44c251a5df385ecp14ccb9jsn763eeb288635" },
-                    { "X-RapidAPI-Host", "social-links-search.p.rapidapi.com" },
-                },
-            };
+            string apiKey = "c9dc83b0cemsh3de750b13d1cc40p122975jsne2d6f7510e0b";
+            string query = "John%20Smith";
+            string url = "https://social-links-search.p.rapidapi.com/search-social-links?query=John%20Smith&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest";
 
-            using (var response = await client.SendAsync(request))
+            using (HttpClient client = new HttpClient())
             {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(body);
+                client.DefaultRequestHeaders.Add("x-rapidapi-key", apiKey);
+                client.DefaultRequestHeaders.Add("x-rapidapi-host", "social-links-search.p.rapidapi.com");
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    //response.EnsureSuccessStatusCode();
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        JObject json = JObject.Parse(jsonResponse);
+                        await Console.Out.WriteLineAsync("Eredmény: "  + json.ToString());
+                    }                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine("\nException Caught!");
+                    Console.WriteLine("Message :{0} ", e.Message);
+                }
+              
             }
-            Console.WriteLine("\nProgram vége");
-            Console.ReadLine();
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
         }
     }
-}
+
