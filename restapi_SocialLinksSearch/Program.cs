@@ -13,11 +13,11 @@ namespace restapi_SocialLinksSearch
     {
         //-- https://rapidapi.com/letscrape-6bRBa3QguO5/api/social-links-search
         //-- Uri("https://social-links-search.p.rapidapi.com/search-social-links?query=John%20Smith&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest")
-        //-- Headers: X-RapidAPI-Key: c9dc83b0cemsh3de750b13d1cc40p122975jsne2d6f7510e0b
+        //-- Headers: X-RapidAPI-Key: regisztrációnál kapott kód
         //-- Headers: X-RapidAPI-Host: social-links-search.p.rapidapi.com
         private static async Task Main()
         {
-            string apiKey = "c9dc83b0cemsh3de750b13d1cc40p122975jsne2d6f7510e0b";
+            string apiKey = "regisztrációnál kapott kód";
             string query = "John%20Smith";
             string url = "https://social-links-search.p.rapidapi.com/search-social-links?query=John%20Smith&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest";
 
