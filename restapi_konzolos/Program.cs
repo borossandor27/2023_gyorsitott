@@ -18,7 +18,7 @@ namespace restapi_konzolos
             try
             {
                 HttpResponseMessage response = await client.GetAsync("http://www.contoso.com/");
-                response.EnsureSuccessStatusCode();
+                response.EnsureSuccessStatusCode(); //-- -> ez dob kivételt, ha nem 200-as a válasz
                 string responseBody = await response.Content.ReadAsStringAsync();
                 // Above three lines can be replaced with new helper method below
                 // string responseBody = await client.GetStringAsync(uri);

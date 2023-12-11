@@ -42,6 +42,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_SocialLinksSearch",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_ZipCodeLookup", "restapi_ZipCodeLookup\restapi_ZipCodeLookup.csproj", "{10C16D2C-68EF-4925-96CD-3A61A2084E9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-12-11_restapi_dogs", "2023-12-11_restapi_dogs\2023-12-11_restapi_dogs.csproj", "{B6F2488C-AD72-4EEF-A883-6C1FEBF45B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCzigleczky", "WindowsFormsCzigleczky\WindowsFormsCzigleczky.csproj", "{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +120,14 @@ Global
 		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10C16D2C-68EF-4925-96CD-3A61A2084E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F2488C-AD72-4EEF-A883-6C1FEBF45B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F2488C-AD72-4EEF-A883-6C1FEBF45B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F2488C-AD72-4EEF-A883-6C1FEBF45B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F2488C-AD72-4EEF-A883-6C1FEBF45B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
