@@ -46,7 +46,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-12-11_restapi_dogs", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCzigleczky", "WindowsFormsCzigleczky\WindowsFormsCzigleczky.csproj", "{6947CE2A-E1F2-41B7-9AD6-C9D3EB521D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiForm", "MultiForm\MultiForm.csproj", "{3F0D83ED-E841-4B11-9145-136A4C3E6FB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-12-18_MultiForm", "MultiForm\2023-12-18_MultiForm.csproj", "{3F0D83ED-E841-4B11-9145-136A4C3E6FB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
