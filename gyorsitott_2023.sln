@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2023-12-18_MultiForm", "Mul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-01-08_Lakopark", "2024-01-08_Lakopark\2024-01-08_Lakopark.csproj", "{BD7A4CD2-1DA8-43AC-A317-46449C7E9855}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-01-15_Laptopok", "2024-01-15_Laptopok\2024-01-15_Laptopok.csproj", "{199874A2-D85A-4B15-ACE6-6BA343C911C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -140,6 +142,10 @@ Global
 		{BD7A4CD2-1DA8-43AC-A317-46449C7E9855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD7A4CD2-1DA8-43AC-A317-46449C7E9855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD7A4CD2-1DA8-43AC-A317-46449C7E9855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199874A2-D85A-4B15-ACE6-6BA343C911C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199874A2-D85A-4B15-ACE6-6BA343C911C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199874A2-D85A-4B15-ACE6-6BA343C911C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199874A2-D85A-4B15-ACE6-6BA343C911C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
