@@ -56,6 +56,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-01-29_listbox", "2024-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-02-12_DataGrid", "2024-02-12_DataGrid\2024-02-12_DataGrid.csproj", "{43D22191-B90A-4A2A-B015-E215D125C923}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_retool", "restapi_retool\restapi_retool.csproj", "{BDB58470-6DF4-413E-8265-E6F7C99C232C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -158,6 +160,10 @@ Global
 		{43D22191-B90A-4A2A-B015-E215D125C923}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D22191-B90A-4A2A-B015-E215D125C923}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D22191-B90A-4A2A-B015-E215D125C923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

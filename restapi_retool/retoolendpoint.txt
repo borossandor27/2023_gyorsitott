@@ -1,0 +1,16 @@
+https://retoolapi.dev/xTKc8y/data
+See all available endpoints here (generated with json-server).
+
+Endpoint URL
+
+
+HTTP method endpoints
+
+GET		/xTKc8y/data
+GET filter	/xTKc8y/data?name=value
+GET by id	/xTKc8y/data/1
+GET paginate	/xTKc8y/data?_page=2&_limit=10
+POST		/xTKc8y/data
+PUT		/xTKc8y/data/1
+PATCH		/xTKc8y/data/1
+DELETE		/xTKc8y/data/1
