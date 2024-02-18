@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using restapi_retool;
+using Newtonsoft.Json;
 
 namespace restapi_retool
 {
@@ -74,6 +75,17 @@ namespace restapi_retool
                 Console.WriteLine("Error reading app settings");
             }
             return result;
+        }
+
+        private void listBox_Dolgozo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Dolgozo dolgozo = (Dolgozo) listBox_Dolgozo.SelectedItem;
+            textBox_id.Text = dolgozo.Id.ToString();
+            textBox_name.Text = dolgozo.Name.ToString();
+            textBox_email.Text= dolgozo.Email.ToString();
+            dateTimePicker_Szuletett.Value = dolgozo.Birthdate();
+            
+            //MessageBox.Show(JsonConvert.SerializeObject(dolgozo));
         }
     }
 }

@@ -14,6 +14,7 @@ namespace restapi_retool
     using System.Collections.Generic;
 
     using System.Globalization;
+    using System.Web.Script.Serialization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
@@ -32,8 +33,19 @@ namespace restapi_retool
         public long Payment { get; set; }
 
         [JsonProperty("birthdate")]
-        public string Birthdate { get; set; }
+        public string BirthdateString
+        {
+            get { return birthdate.ToString("yyyy-MM-dd"); }
+            set { birthdate = DateTime.Parse(value); }
+        }
 
+        private DateTime birthdate;
+
+        public DateTime Birthdate()
+        {
+            return birthdate;
+        }
+  
         override public string ToString()
         {
             return Name;
