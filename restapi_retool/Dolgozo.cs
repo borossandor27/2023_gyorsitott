@@ -41,9 +41,11 @@ namespace restapi_retool
 
         private DateTime birthdate;
 
-        public DateTime Birthdate()
+        public DateTime Birthdate
         {
-            return birthdate;
+            get { return birthdate; }
+
+            set { birthdate = value; }
         }
   
         override public string ToString()
