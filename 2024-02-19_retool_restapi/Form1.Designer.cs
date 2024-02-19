@@ -44,6 +44,7 @@
             this.button_Read = new System.Windows.Forms.Button();
             this.button_Update = new System.Windows.Forms.Button();
             this.button_Delete = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox_Payment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +58,11 @@
             this.listBox_Vasarlasok.Name = "listBox_Vasarlasok";
             this.listBox_Vasarlasok.Size = new System.Drawing.Size(221, 344);
             this.listBox_Vasarlasok.TabIndex = 0;
+            this.listBox_Vasarlasok.SelectedIndexChanged += new System.EventHandler(this.listBox_Vasarlasok_SelectedIndexChanged);
             // 
             // groupBox_Payment
             // 
+            this.groupBox_Payment.Controls.Add(this.label6);
             this.groupBox_Payment.Controls.Add(this.button_Delete);
             this.groupBox_Payment.Controls.Add(this.button_Update);
             this.groupBox_Payment.Controls.Add(this.button_Read);
@@ -118,8 +121,8 @@
             // 
             this.comboBox_Gender.FormattingEnabled = true;
             this.comboBox_Gender.Items.AddRange(new object[] {
-            "ferfi",
-            "no"});
+            "Ferfi",
+            "No"});
             this.comboBox_Gender.Location = new System.Drawing.Point(125, 120);
             this.comboBox_Gender.Name = "comboBox_Gender";
             this.comboBox_Gender.Size = new System.Drawing.Size(121, 24);
@@ -155,6 +158,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.ThousandsSeparator = true;
             // 
             // dateTimePicker_date
             // 
@@ -183,6 +187,7 @@
             this.button_Create.TabIndex = 9;
             this.button_Create.Text = "Új";
             this.button_Create.UseVisualStyleBackColor = true;
+            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
             // button_Read
             // 
@@ -192,6 +197,7 @@
             this.button_Read.TabIndex = 10;
             this.button_Read.Text = "Olvasás";
             this.button_Read.UseVisualStyleBackColor = true;
+            this.button_Read.Click += new System.EventHandler(this.button_Read_Click);
             // 
             // button_Update
             // 
@@ -210,6 +216,15 @@
             this.button_Delete.TabIndex = 12;
             this.button_Delete.Text = "Törlés";
             this.button_Delete.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(251, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "€";
             // 
             // Form1
             // 
@@ -246,6 +261,7 @@
         private System.Windows.Forms.Button button_Create;
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Update;
+        private System.Windows.Forms.Label label6;
     }
 }
 

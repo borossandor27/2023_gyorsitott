@@ -31,6 +31,11 @@ namespace _2024_02_19_retool_restapi
 
         [JsonProperty("payment")]
         public long Payment { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     public enum Gender { Ferfi, No };
