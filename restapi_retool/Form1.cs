@@ -18,7 +18,7 @@ namespace restapi_retool
     public partial class Form1 : Form
     {
         string endPoint = ReadSetting("endPoint");
-        HttpClient client = new HttpClient();
+        HttpClient client = new HttpClient(); //-- https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-8.0
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +27,10 @@ namespace restapi_retool
         private void Form1_Load(object sender, EventArgs e)
         {
             dateTimePicker_Szuletett.MaxDate = DateTime.Today;
+            dateTimePicker_Szuletett.MinDate = DateTime.Today.AddYears(-120);
             dateTimePicker_Szuletett.Value = DateTime.Today.AddYears(-18);
+            dateTimePicker_Szuletett.ShowCheckBox = true;
+            dateTimePicker_Szuletett.Checked = false;
             listaFrissitese();
         }
 

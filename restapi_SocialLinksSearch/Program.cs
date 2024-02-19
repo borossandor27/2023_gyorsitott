@@ -18,7 +18,7 @@ namespace restapi_SocialLinksSearch
         private static async Task Main()
         {
             string apiKey = "regisztrációnál kapott kód";
-            string query = "John%20Smith";
+            string query = "John Smith";
             string url = "https://social-links-search.p.rapidapi.com/search-social-links?query=John%20Smith&social_networks=facebook%2Ctiktok%2Cinstagram%2Csnapchat%2Ctwitter%2Cyoutube%2Clinkedin%2Cgithub%2Cpinterest";
 
             using (HttpClient client = new HttpClient())
