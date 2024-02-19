@@ -58,6 +58,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-02-12_DataGrid", "2024
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_retool", "restapi_retool\restapi_retool.csproj", "{BDB58470-6DF4-413E-8265-E6F7C99C232C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-02-19_retool_restapi", "2024-02-19_retool_restapi\2024-02-19_retool_restapi.csproj", "{1240B0B1-8BF3-4883-BE49-BE5A57C84940}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +166,10 @@ Global
 		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB58470-6DF4-413E-8265-E6F7C99C232C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
