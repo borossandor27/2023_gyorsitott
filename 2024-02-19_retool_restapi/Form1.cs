@@ -42,6 +42,12 @@ namespace _2024_02_19_retool_restapi
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //comboBox_Gender.Items.Clear();
+            //foreach (var item in Enum.GetValues(typeof(Gender)))
+            //    {
+            //    comboBox_Gender.Items.Add(item);
+            //}
+            comboBox_Gender.DataSource = Enum.GetValues(typeof(Gender));
             listafrissitese();
         }
 
@@ -74,7 +80,7 @@ namespace _2024_02_19_retool_restapi
             textBox_Name.Text = vasarlo.Name.ToString();
             dateTimePicker_date.Value = DateTime.Parse(vasarlo.Date);
             numericUpDown1.Value = vasarlo.Payment;
-            comboBox_Gender.Text = vasarlo.Gender.ToString();
+            comboBox_Gender.DataSource = Enum.GetValues(typeof(Gender));
 
         }
 
@@ -94,8 +100,7 @@ namespace _2024_02_19_retool_restapi
             }
             vasarlo.Name = textBox_Name.Text;
             vasarlo.Date=dateTimePicker_date.Value.ToString("yyyy-MM-dd");
-            string nem = comboBox_Gender.SelectedItem.ToString();
-            vasarlo.Gender = (Gender)Enum.Parse(typeof(Gender), "No");
+                        vasarlo.Gender =(Gender) Enum.Parse(typeof(Gender), comboBox_Gender.SelectedValue.ToString());
             vasarlo.Payment =(long) numericUpDown1.Value;
             //-- json-server tudja az autoincrement ----
             var json = JsonConvert.SerializeObject(vasarlo); //-- továbbítandó adat
