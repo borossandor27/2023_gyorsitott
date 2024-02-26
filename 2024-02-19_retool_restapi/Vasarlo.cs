@@ -27,7 +27,7 @@ namespace _2024_02_19_retool_restapi
         public string Name { get; set; }
 
         [JsonProperty("gender")]
-        public Gender Gender { get; set; }
+        public string Gender { get; set; }
 
         [JsonProperty("payment")]
         public long Payment { get; set; }
@@ -38,7 +38,7 @@ namespace _2024_02_19_retool_restapi
         }
     }
 
-    public enum Gender { Ferfi, No };
+    public enum Gender { ferfi, no };
 
     public partial class Vasarlo
     {
@@ -75,9 +75,9 @@ namespace _2024_02_19_retool_restapi
             switch (value)
             {
                 case "ferfi":
-                    return Gender.Ferfi;
+                    return Gender.ferfi;
                 case "no":
-                    return Gender.No;
+                    return Gender.no;
             }
             throw new Exception("Cannot unmarshal type Gender");
         }
@@ -92,10 +92,10 @@ namespace _2024_02_19_retool_restapi
             var value = (Gender)untypedValue;
             switch (value)
             {
-                case Gender.Ferfi:
+                case Gender.ferfi:
                     serializer.Serialize(writer, "ferfi");
                     return;
-                case Gender.No:
+                case Gender.no:
                     serializer.Serialize(writer, "no");
                     return;
             }

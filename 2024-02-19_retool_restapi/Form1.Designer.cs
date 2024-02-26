@@ -30,21 +30,21 @@
         {
             this.listBox_Vasarlasok = new System.Windows.Forms.ListBox();
             this.groupBox_Payment = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_id = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.comboBox_Gender = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button_Create = new System.Windows.Forms.Button();
-            this.button_Read = new System.Windows.Forms.Button();
-            this.button_Update = new System.Windows.Forms.Button();
-            this.button_Delete = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button_Delete = new System.Windows.Forms.Button();
+            this.button_Update = new System.Windows.Forms.Button();
+            this.button_Read = new System.Windows.Forms.Button();
+            this.button_Create = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_Gender = new System.Windows.Forms.ComboBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox_Payment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -85,66 +85,73 @@
             this.groupBox_Payment.TabStop = false;
             this.groupBox_Payment.Text = "Kiválasztott vásárlás";
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "id";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(251, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "€";
             // 
-            // textBox_id
+            // button_Delete
             // 
-            this.textBox_id.Location = new System.Drawing.Point(125, 30);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(122, 22);
-            this.textBox_id.TabIndex = 1;
+            this.button_Delete.Location = new System.Drawing.Point(401, 267);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(89, 37);
+            this.button_Delete.TabIndex = 12;
+            this.button_Delete.Text = "Törlés";
+            this.button_Delete.UseVisualStyleBackColor = true;
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 
-            // label2
+            // button_Update
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Név";
+            this.button_Update.Location = new System.Drawing.Point(276, 270);
+            this.button_Update.Name = "button_Update";
+            this.button_Update.Size = new System.Drawing.Size(89, 37);
+            this.button_Update.TabIndex = 11;
+            this.button_Update.Text = "Módosít";
+            this.button_Update.UseVisualStyleBackColor = true;
+            this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
-            // textBox_Name
+            // button_Read
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(125, 80);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(216, 22);
-            this.textBox_Name.TabIndex = 2;
+            this.button_Read.Location = new System.Drawing.Point(149, 273);
+            this.button_Read.Name = "button_Read";
+            this.button_Read.Size = new System.Drawing.Size(89, 37);
+            this.button_Read.TabIndex = 10;
+            this.button_Read.Text = "Olvasás";
+            this.button_Read.UseVisualStyleBackColor = true;
+            this.button_Read.Click += new System.EventHandler(this.button_Read_Click);
             // 
-            // comboBox_Gender
+            // button_Create
             // 
-            this.comboBox_Gender.FormattingEnabled = true;
-            this.comboBox_Gender.Items.AddRange(new object[] {
-            "Ferfi",
-            "No"});
-            this.comboBox_Gender.Location = new System.Drawing.Point(125, 120);
-            this.comboBox_Gender.Name = "comboBox_Gender";
-            this.comboBox_Gender.Size = new System.Drawing.Size(121, 24);
-            this.comboBox_Gender.TabIndex = 3;
+            this.button_Create.Location = new System.Drawing.Point(39, 273);
+            this.button_Create.Name = "button_Create";
+            this.button_Create.Size = new System.Drawing.Size(89, 37);
+            this.button_Create.TabIndex = 9;
+            this.button_Create.Text = "Új";
+            this.button_Create.UseVisualStyleBackColor = true;
+            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Nem";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Dátum";
             // 
-            // label4
+            // dateTimePicker_date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Összeg";
+            this.dateTimePicker_date.Checked = false;
+            this.dateTimePicker_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_date.Location = new System.Drawing.Point(125, 216);
+            this.dateTimePicker_date.Name = "dateTimePicker_date";
+            this.dateTimePicker_date.ShowCheckBox = true;
+            this.dateTimePicker_date.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker_date.TabIndex = 7;
             // 
             // numericUpDown1
             // 
@@ -160,71 +167,67 @@
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown1.ThousandsSeparator = true;
             // 
-            // dateTimePicker_date
+            // label4
             // 
-            this.dateTimePicker_date.Checked = false;
-            this.dateTimePicker_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_date.Location = new System.Drawing.Point(125, 216);
-            this.dateTimePicker_date.Name = "dateTimePicker_date";
-            this.dateTimePicker_date.ShowCheckBox = true;
-            this.dateTimePicker_date.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker_date.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Összeg";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Dátum";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Nem";
             // 
-            // button_Create
+            // comboBox_Gender
             // 
-            this.button_Create.Location = new System.Drawing.Point(39, 273);
-            this.button_Create.Name = "button_Create";
-            this.button_Create.Size = new System.Drawing.Size(89, 37);
-            this.button_Create.TabIndex = 9;
-            this.button_Create.Text = "Új";
-            this.button_Create.UseVisualStyleBackColor = true;
-            this.button_Create.Click += new System.EventHandler(this.button_Create_Click);
+            this.comboBox_Gender.FormattingEnabled = true;
+            this.comboBox_Gender.Items.AddRange(new object[] {
+            "Ferfi",
+            "No"});
+            this.comboBox_Gender.Location = new System.Drawing.Point(125, 120);
+            this.comboBox_Gender.Name = "comboBox_Gender";
+            this.comboBox_Gender.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_Gender.TabIndex = 3;
             // 
-            // button_Read
+            // textBox_Name
             // 
-            this.button_Read.Location = new System.Drawing.Point(149, 273);
-            this.button_Read.Name = "button_Read";
-            this.button_Read.Size = new System.Drawing.Size(89, 37);
-            this.button_Read.TabIndex = 10;
-            this.button_Read.Text = "Olvasás";
-            this.button_Read.UseVisualStyleBackColor = true;
-            this.button_Read.Click += new System.EventHandler(this.button_Read_Click);
+            this.textBox_Name.Location = new System.Drawing.Point(125, 80);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(216, 22);
+            this.textBox_Name.TabIndex = 2;
             // 
-            // button_Update
+            // label2
             // 
-            this.button_Update.Location = new System.Drawing.Point(276, 270);
-            this.button_Update.Name = "button_Update";
-            this.button_Update.Size = new System.Drawing.Size(89, 37);
-            this.button_Update.TabIndex = 11;
-            this.button_Update.Text = "Módosít";
-            this.button_Update.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Név";
             // 
-            // button_Delete
+            // textBox_id
             // 
-            this.button_Delete.Location = new System.Drawing.Point(401, 267);
-            this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(89, 37);
-            this.button_Delete.TabIndex = 12;
-            this.button_Delete.Text = "Törlés";
-            this.button_Delete.UseVisualStyleBackColor = true;
+            this.textBox_id.Location = new System.Drawing.Point(125, 30);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.ReadOnly = true;
+            this.textBox_id.Size = new System.Drawing.Size(122, 22);
+            this.textBox_id.TabIndex = 1;
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(251, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 20);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "€";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "id";
             // 
             // Form1
             // 

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using _2024_02_19_retool_restapi;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace _2024_02_19_retool_restapi
 {
@@ -80,7 +81,7 @@ namespace _2024_02_19_retool_restapi
             textBox_Name.Text = vasarlo.Name.ToString();
             dateTimePicker_date.Value = DateTime.Parse(vasarlo.Date);
             numericUpDown1.Value = vasarlo.Payment;
-            comboBox_Gender.DataSource = Enum.GetValues(typeof(Gender));
+            comboBox_Gender.Text = vasarlo.Gender;
 
         }
 
@@ -100,7 +101,7 @@ namespace _2024_02_19_retool_restapi
             }
             vasarlo.Name = textBox_Name.Text;
             vasarlo.Date = dateTimePicker_date.Value.ToString("yyyy-MM-dd");
-            vasarlo.Gender = (Gender)Enum.Parse(typeof(Gender), comboBox_Gender.SelectedValue.ToString());
+            vasarlo.Gender = comboBox_Gender.SelectedValue.ToString();
             //vasarlo.Gender = 1;
             vasarlo.Payment = (long)numericUpDown1.Value;
             //-- json-server tudja az autoincrement ----
@@ -121,6 +122,88 @@ namespace _2024_02_19_retool_restapi
             numericUpDown1.Value = numericUpDown1.Minimum;
             comboBox_Gender.Text = "";
             dateTimePicker_date.Checked = false;
+        }
+
+        private void button_Update_Click(object sender, EventArgs e)
+        {
+            //-- adatellenőrzés
+            if (string.IsNullOrEmpty(textBox_id.Text))
+            {
+                MessageBox.Show("Nincs kiválasztott vásárló!"); 
+                return;
+            }
+            if (textBox_Name.Text.Length < 3)
+            {
+                MessageBox.Show("Név megadása kötelező!"); 
+                textBox_Name.Focus();
+                return;
+            }
+            if (!dateTimePicker_date.Checked)
+            {
+                MessageBox.Show("Adjon meg dátumot!");
+                return;
+            }
+
+            Vasarlo vasarlo = new Vasarlo();
+            
+            vasarlo.Id=long.Parse(textBox_id.Text);
+            vasarlo.Name = textBox_Name.Text;
+            vasarlo.Date = dateTimePicker_date.Value.ToString("yyyy-MM-dd");
+            vasarlo.Gender = comboBox_Gender.SelectedValue.ToString();
+            vasarlo.Payment = (long)numericUpDown1.Value;
+            
+            var json = JsonConvert.SerializeObject(vasarlo); //-- továbbítandó adat
+            var data = new StringContent(json, Encoding.UTF8, "application/json"); //-- fejlécet adtunk hozzá
+            string endPointUpdate = $"{endPoint}/{vasarlo.Id}";
+            var response = client.PutAsync(endPointUpdate, data).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Sikeres módosítás!");
+                listafrissitese();
+            }
+            else
+            {
+                MessageBox.Show("Sikertelen módosítás!");
+            }
+            //-- beviteli mezők törlése ---------------
+            textBox_id.Text = string.Empty;
+            textBox_Name.Text = string.Empty;
+            numericUpDown1.Value = numericUpDown1.Minimum;
+            comboBox_Gender.Text = "";
+            dateTimePicker_date.Checked = false;
+        }
+
+        private void button_Delete_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("valóban törölni akarja?")==DialogResult.OK) {
+                Vasarlo vasarlo = new Vasarlo();
+
+                vasarlo.Id = long.Parse(textBox_id.Text);
+                string endPointDelete= $"{endPoint}/{vasarlo.Id}";
+                vasarlo.Name = textBox_Name.Text;
+                vasarlo.Date = dateTimePicker_date.Value.ToString("yyyy-MM-dd");
+                vasarlo.Gender = comboBox_Gender.SelectedValue.ToString();
+                vasarlo.Payment = (long)numericUpDown1.Value;
+
+                string endPointUpdate = $"{endPoint}/{vasarlo.Id}";
+                var response = client.DeleteAsync(endPointUpdate).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Sikeres törlés!");
+                    listafrissitese();
+                }
+                else
+                {
+                    MessageBox.Show("Sikertelen törlés!");
+                }
+                //-- beviteli mezők törlése ---------------
+                textBox_id.Text = string.Empty;
+                textBox_Name.Text = string.Empty;
+                numericUpDown1.Value = numericUpDown1.Minimum;
+                comboBox_Gender.Text = "";
+                dateTimePicker_date.Checked = false;
+
+            }
         }
     }
 }
