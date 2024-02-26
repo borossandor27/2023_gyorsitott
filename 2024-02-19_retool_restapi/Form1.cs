@@ -99,9 +99,10 @@ namespace _2024_02_19_retool_restapi
                 return;
             }
             vasarlo.Name = textBox_Name.Text;
-            vasarlo.Date=dateTimePicker_date.Value.ToString("yyyy-MM-dd");
-                        vasarlo.Gender =(Gender) Enum.Parse(typeof(Gender), comboBox_Gender.SelectedValue.ToString());
-            vasarlo.Payment =(long) numericUpDown1.Value;
+            vasarlo.Date = dateTimePicker_date.Value.ToString("yyyy-MM-dd");
+            vasarlo.Gender = (Gender)Enum.Parse(typeof(Gender), comboBox_Gender.SelectedValue.ToString());
+            //vasarlo.Gender = 1;
+            vasarlo.Payment = (long)numericUpDown1.Value;
             //-- json-server tudja az autoincrement ----
             var json = JsonConvert.SerializeObject(vasarlo); //-- továbbítandó adat
             var data = new StringContent(json, Encoding.UTF8, "application/json"); //-- fejlécet adtunk hozzá
@@ -115,11 +116,11 @@ namespace _2024_02_19_retool_restapi
             {
                 MessageBox.Show("Sikertelen felvitel!");
             }
-            textBox_id.Text= string.Empty;
-            textBox_Name.Text= string.Empty;
+            textBox_id.Text = string.Empty;
+            textBox_Name.Text = string.Empty;
             numericUpDown1.Value = numericUpDown1.Minimum;
             comboBox_Gender.Text = "";
-            dateTimePicker_date.Checked=false;
+            dateTimePicker_date.Checked = false;
         }
     }
 }
