@@ -60,6 +60,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restapi_retool", "restapi_r
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2024-02-19_retool_restapi", "2024-02-19_retool_restapi\2024-02-19_retool_restapi.csproj", "{1240B0B1-8BF3-4883-BE49-BE5A57C84940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizsgaremek", "Vizsgaremek\Vizsgaremek.csproj", "{E227026B-8993-4742-91B4-3D6C52D1F5EB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VizsgaremekTeelepito", "VizsgaremekTeelepito\VizsgaremekTeelepito.vdproj", "{01C0927A-4F84-44C9-9B8F-077E4298309B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -170,6 +174,12 @@ Global
 		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1240B0B1-8BF3-4883-BE49-BE5A57C84940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E227026B-8993-4742-91B4-3D6C52D1F5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E227026B-8993-4742-91B4-3D6C52D1F5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E227026B-8993-4742-91B4-3D6C52D1F5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E227026B-8993-4742-91B4-3D6C52D1F5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C0927A-4F84-44C9-9B8F-077E4298309B}.Debug|Any CPU.ActiveCfg = Debug
+		{01C0927A-4F84-44C9-9B8F-077E4298309B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
